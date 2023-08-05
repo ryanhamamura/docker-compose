@@ -1,0 +1,21 @@
+$TTL 2d
+
+$ORIGIN ham.adriatica.home.
+
+@             IN        SOA       ns.ham.adriatica.home. rhamamur.gmail.com. (
+                                  2023080500    ; serial
+                                  12h           ; refresh
+                                  15m           ; retry
+                                  3w            ; expire
+                                  2h            ; minimum ttl 
+                                  )
+
+              IN        NS        ns.ham.adriatica.home.
+
+ns            IN        A         192.168.55.3
+
+; -- add dns records below
+
+srv-prd-01    IN        A         192.168.55.3
+proxmox       IN        A         192.168.55.7
+jellyfin      IN        A         192.168.55.8
