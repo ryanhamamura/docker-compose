@@ -3,14 +3,14 @@ version: "3"
 
 services:
   bind9:
-    container_name: dns-test-01
+    container_name: dns-prd-01
     image: ubuntu/bind9:latest
     environment:
       - BIND9_USER=root
       - TZ=Pacific/Honolulu
     ports:
-      - "53:53/tcp"
-      - "53:53/udp"
+      - "192.168.55.3:53:53/tcp"
+      - "192.168.55.3:53:53/udp"
     volumes:
       - ./config:/etc/bind 
       - ./cache:/var/cache/bind 
