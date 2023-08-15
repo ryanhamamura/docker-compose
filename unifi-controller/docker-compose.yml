@@ -4,6 +4,7 @@ services:
   unifi-controller:
     image: lscr.io/linuxserver/unifi-controller:amd64-7.4.162
     container_name: unifi-controller 
+    #network_mode: host
     environment:
       - PUID=1000
       - PGID=1000
@@ -13,10 +14,10 @@ services:
     volumes:
       - /opt/unifi-controller/config:/config
     ports:
-      - 8443:8443
-      - 3478:3478/udp
-      - 10001:10001/udp
-      - 8080:8080 
+      - 192.168.55.3:8443:8443
+      - 192.168.55.3:3478:3478/udp
+      - 192.168.55.3:10001:10001/udp
+      - 192.168.55.3:8080:8080 
       - 1900:1900/udp #optional 
       - 8843:8843 #optional
       - 8880:8880 #optional 
