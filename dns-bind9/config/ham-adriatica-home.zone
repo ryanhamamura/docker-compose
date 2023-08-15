@@ -16,6 +16,10 @@ ns            IN        A         192.168.55.3
 
 ; -- add dns records below
 
+pfsense	      IN        A         192.168.55.1
 srv-prd-01    IN        A         192.168.55.3
+srv-dev-01    IN        A         192.168.55.4
 proxmox       IN        A         192.168.55.7
 jellyfin      IN        A         192.168.55.8
+homeassistant IN        A         192.168.55.65
+

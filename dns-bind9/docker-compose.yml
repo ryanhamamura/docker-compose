@@ -4,7 +4,7 @@ version: "3"
 services:
   bind9:
     container_name: dns-prd-01
-    image: ubuntu/bind9:latest
+    image: ubuntu/bind9:9.16-20.04_beta
     environment:
       - BIND9_USER=root
       - TZ=Pacific/Honolulu
